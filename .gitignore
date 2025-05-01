@@ -1,0 +1,33 @@
+# ─── Virtual Environments ───────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+
+# ─── Byte-compiled / Optimized ─────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ─── Distribution / Packaging ──────────────────────────────────────────────────
+build/
+dist/
+*.egg-info/
+
+# ─── IDE / Editor folders ──────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.iml
+
+# ─── PyTest / Coverage ─────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ─── OS/System files ───────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# ─── Logs, databases, local settings ───────────────────────────────────────────
+*.log
+*.sqlite3

@@ -1,0 +1,12 @@
+numpy
+opencv-python-headless
+mediapipe
+streamlit
+streamlit_webrtc
+streamlit-authenticator
+streamlit-calendar
+langchain
+langchain-community
+langchain-openai
+pillow
+
