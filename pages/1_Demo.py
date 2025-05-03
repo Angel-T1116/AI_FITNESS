@@ -10,7 +10,7 @@ inject_custom_css(theme)
 st.title('AI Trainer Demo')
 
 
-recorded_file = r'C:\Users\angel\OneDrive\Desktop\AI\AI_Final\AI_Personal_Trainer\output_sample.mp4'
+recorded_file = r'output_sample.mp4'
 if os.path.exists(recorded_file):
     st.video(recorded_file)
 else:
