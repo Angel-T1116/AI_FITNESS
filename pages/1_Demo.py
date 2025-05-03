@@ -1,8 +1,13 @@
 import os
 import streamlit as st
-from utils import set_sidebar_visibility  
+from utils import set_sidebar_visibility 
+from utils import get_theme, inject_custom_css
 
-st.title('AI Fitness Trainer: Squats Analysis')
+theme = get_theme()
+inject_custom_css(theme)
+
+
+st.title('AI Trainer Demo')
 
 
 recorded_file = r'C:\Users\angel\OneDrive\Desktop\AI\AI_Final\AI_Personal_Trainer\output_sample.mp4'

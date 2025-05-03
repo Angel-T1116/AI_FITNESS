@@ -5,10 +5,14 @@ import pickle
 from pathlib import Path
 import streamlit_authenticator as stauth
 from utils import set_sidebar_visibility
+from utils import get_theme, inject_custom_css
 
 # Config
-page_icon = Image.open("cover.png")
+page_icon = Image.open("logo.png")
 st.set_page_config(layout="centered", page_title="Gym Posture Correction", page_icon=page_icon, )
+
+theme = get_theme()
+inject_custom_css(theme)
 
 #Login page
 file_path = Path(__file__).parent / "hashed.pkl"
@@ -151,12 +155,12 @@ if authentication_status == True:
 
     # Logo 
     col1, col2, col3 = st.columns([0.25,1,0.25])
-    col2.image("d2t.png", use_column_width=True)
+    col2.image("logo.png", use_container_width=True)
     new_line(2)
 
     # Description
-    st.markdown("""Welcome to the Gym Posture Correction App, the easy-to-use platform for your gym posture correction! This app helps you improve your posture during gym workouts.
-            Please select a page from the navigation sidebar to get started.""", unsafe_allow_html=True)
+    st.markdown("""Welcome to Gym Posture Correction—your simple, user-friendly tool for perfecting form during workouts.
+Use the navigation sidebar to pick a page and begin.""", unsafe_allow_html=True)
     st.divider()
 
     # Dataframe selection

@@ -149,3 +149,116 @@ def get_mediapipe_pose(
 def set_sidebar_visibility(authentication_status):
     if hasattr(st.sidebar, "visible"):
         st.sidebar.visible = authentication_status
+
+def get_theme():
+    return st.sidebar.radio("Select Theme", ["Light", "Dark"], key="theme_select")
+
+def inject_custom_css(theme: str):
+    if theme == "Light":
+        st.markdown("""
+            <style>
+            html, body, [class*="st-"] {
+                color: black !important;
+                background-color: #F7F9FC !important;
+            }
+            .stButton > button {
+                background-color: #3A86FF;
+                color: white;
+                font-weight: bold;
+                border: none;
+                padding: 0.5em 1.2em;
+                border-radius: 8px;
+                margin-top: 0.5em;
+            }
+            .stAlert {
+                background-color: #e6f0ff !important;
+                color: #003366 !important;
+                border-radius: 8px !important;
+            }
+            section[data-testid="stSidebar"] {
+                background-color: #f0f4ff;
+                color: black !important;
+            }
+                    input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #fff;
+    border: 2px solid #3A86FF;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+/* Blue checkmark when checked */
+input[type="checkbox"]:checked::before {
+    content: "✔";
+    display: block;
+    color: #3A86FF;
+    font-size: 14px;
+    text-align: center;
+    line-height: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+            </style>
+        """, unsafe_allow_html=True)
+    else:
+        st.markdown("""
+            <style>
+            html, body, [class*="st-"] {
+                color: white !important;
+                background-color: #0e0e0e !important;
+            }
+            .stButton > button {
+                background-color: #3A86FF;
+                color: white;
+                font-weight: bold;
+                border: none;
+                padding: 0.5em 1.2em;
+                border-radius: 8px;
+                margin-top: 0.5em;
+            }
+            .stAlert {
+                background-color: #223 !important;
+                color: #eee !important;
+                border-radius: 8px !important;
+            }
+            section[data-testid="stSidebar"] {
+                background-color: #111;
+                color: white !important;
+            }
+                    input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #fff;
+    border: 2px solid #3A86FF;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+/* Blue checkmark when checked */
+input[type="checkbox"]:checked::before {
+    content: "✔";
+    display: block;
+    color: #3A86FF;
+    font-size: 14px;
+    text-align: center;
+    line-height: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+            </style>
+        """, unsafe_allow_html=True)

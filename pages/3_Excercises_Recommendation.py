@@ -19,6 +19,11 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 import datetime
 from utils import set_sidebar_visibility  
+from utils import get_theme, inject_custom_css
+
+theme = get_theme()
+inject_custom_css(theme)
+
 BASE_DIR = os.path.abspath(os.path.join(__file__, '../../'))
 sys.path.append(BASE_DIR)
 
@@ -29,7 +34,6 @@ chat_container = st.empty()
 
 
 # Define your chatbot model
-llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0,openai_api_key='sk-XXXXXXXXXXXXXXXXXXXX')
 output_parser = StrOutputParser()
 # Text input for entering messages
 

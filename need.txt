@@ -1,0 +1,21 @@
+# Define credentials
+credentials = {
+    "usernames": {
+        "angel": {
+            "name": "Angel",
+            "password": hashed_passwords[0]
+        },
+        "trujillo": {
+            "name": "Trujillo",
+            "password": hashed_passwords[1]
+        }
+    }
+}
+
+# Create authenticator properly
+authenticator = stauth.Authenticate(
+    credentials,
+    "Gym Posture Correction",  # cookie_name
+    "abcdef",                  # key
+    cookie_expiry_days=30
+)

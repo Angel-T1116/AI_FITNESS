@@ -2,11 +2,12 @@ import streamlit as st
 from streamlit_calendar import calendar
 import json
 from utils import set_sidebar_visibility  
-
-
 st.set_page_config(page_title="Demo for streamlit-calendar", page_icon="📆")
 
+from utils import get_theme, inject_custom_css
 
+theme = get_theme()
+inject_custom_css(theme)
 
 transferred_value = st.session_state.get('transferred_variable')
 
