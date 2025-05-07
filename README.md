@@ -22,7 +22,7 @@ Clone the repository:
  - venv\Scripts\activate
 ### Install dependencies:
  - pip install -r requirements.txt
-Run the application:
+### Run the application:
  - streamlit run Homepage.py
 ---
 Then follow the on-screen instructions to analyze your posture and get personalized workout recommendations.
