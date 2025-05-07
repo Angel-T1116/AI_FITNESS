@@ -16,7 +16,10 @@ An AI-powered personal trainer that provides real-time posture correction and pe
 ---
 ## How to Use This Repository
 Clone the repository:
- - git clone https://github.com/Angel-T1116/AI_FITNESS.git 
+ - git clone https://github.com/Angel-T1116/AI_FITNESS.git
+Optional: Set up virtual environment
+ - python -m venv venv
+ - venv\Scripts\activate
 Install dependencies:
  - pip install -r requirements.txt
 Run the application:
