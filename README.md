@@ -20,7 +20,7 @@ Clone the repository:
 ### Optional: Set up virtual environment
  - python -m venv venv
  - venv\Scripts\activate
-Install dependencies:
+### Install dependencies:
  - pip install -r requirements.txt
 Run the application:
  - streamlit run Homepage.py
